@@ -92,9 +92,10 @@ nlu:
 
 - intent: check_balance
   examples: |
-    - What's my account balance?
-    - Can you tell me how much money I have?
-    - Check my balance.
+    - What's my balance?
+    - Can you tell me my account balance?
+    - I want to check my balance.
+    - How much money do I have in my account?
 
 - intent: transaction_history
   examples: |
