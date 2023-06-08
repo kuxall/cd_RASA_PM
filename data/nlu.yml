@@ -96,18 +96,56 @@ nlu:
     - Can you tell me my account balance?
     - I want to check my balance.
     - How much money do I have in my account?
+    - Show me my balance.
+    - Check my account balance.
+    - Get my current balance.
+    - What is the balance in my account?
+    - Tell me the amount in my account.
+    - Show me my available funds.
+    - Display my account balance.
+    - Can you inform me about my balance?
+    - Give me an update on my account balance.
+    - What's the current amount in my account?
+    - Please provide my account balance.
+    - I'd like to know my balance.
 
 - intent: transaction_history
   examples: |
     - Show my transaction history.
     - Can you show me my past transactions?
     - Please provide me my transaction details.
+    - I want to see my transaction history.
+    - Display my recent transactions.
+    - Give me a summary of my transactions.
+    - Show me the list of transactions.
+    - What are my transaction records?
+    - Get me the details of my past transactions.
+    - Can I view my transaction history?
+    - I need to check my transaction log.
+    - Show me the transaction summary.
+    - Provide my transaction statement.
+    - I want to know about my transaction activities.
+    - Can you give me information about my previous transactions?
+    - Retrieve my transaction history.
 
 - intent: provide_details
   examples: |
-    - My name is [Ram Prasad](name)
-    - My account number is [00000000001234567890](account_number)
-    - I'm contacting you from phone number [987654321](phone_number)
+    - My name is [Ram Prasad](name).
+    - My account number is [00000000001234567890](account_number).
+    - I'm contacting you from phone number [987654321](phone_number).
+    - This is [Ram Prasad](name) speaking.
+    - The account holder is [Ram Prasad](name).
+    - The account number is [00000000001234567890](account_number).
+    - Contacting from phone number [987654321](phone_number).
+    - I want to update my details.
+    - The customer's name is [Ram Prasad](name).
+    - The account number belongs to [Ram Prasad](name).
+    - [Ram Prasad](name) is the owner of the account.
+    - The account is registered under [Ram Prasad](name).
+    - [Ram Prasad](name) is my name.
+    - The account with [00000000001234567890](account_number) is mine.
+    - I'm [Ram Prasad](name) and my account number is [00000000001234567890](account_number).
+    - I'm contacting you regarding my account with number [00000000001234567890](account_number).
 
 - lookup: account_number
   examples: |

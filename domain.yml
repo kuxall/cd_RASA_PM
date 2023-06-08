@@ -3,11 +3,14 @@ version: "3.1"
 intents:
   - greet
   - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
   - check_balance
   - transaction_history
-  - bot_challenge
   - provide_details
-  - mood_unhappy
 
 slots:
   account_number:
@@ -34,7 +37,10 @@ entities:
 responses:
   utter_greet:
     - text: "Hello! How can I assist you today?"
-
+  
+  utter_iamabot:
+    - text: "Yes, I am a bot."
+  
   utter_goodbye:
     - text: "Goodbye! Have a nice day."
 
@@ -42,16 +48,24 @@ responses:
     - text: "Please provide your account number."
 
   utter_ask_name:
-    - text: "May I know your name?"
+    - text: "Please provide your name."
 
   utter_ask_phone_number:
-    - text: "What is your phone number?"
+    - text: "Please provide your phone number."
 
-  utter_confirmation:
-    - text: "Confirmation response goes here."
+  utter_account_balance:
+    - text: f"Dear {name}, your account {account_number} has a balance of Rs. {balance}."
 
-  utter_iamabot:
-    - text: "I am a bot response goes here."
+  utter_account_not_found:
+    - text: "Sorry, we couldn't find your account information."
+
+  utter_transaction_history:
+    - text: f"Here are your transaction details:{transaction_history}"
+
+  utter_account_details_extracted:
+    - text: "I have extracted your account details."
+    - text: "Here are your account details:"
+    - text: f"Account Holder: {name}\nAccount Number: {account_number}\nPhone Number: {phone_number}"
 
 actions:
   - action_extract_account_details
@@ -62,9 +76,3 @@ actions:
 templates:
   utter_ask_continue:
     - text: "Do you want to continue?"
-
-  utter_balance:
-    - text: "Dear {name}, your account with number {account_number} has a balance of Rs. {balance}."
-
-  utter_transaction_history:
-    - text: "Here is the transaction history for your account with number {account_number}: {transaction_history}."
