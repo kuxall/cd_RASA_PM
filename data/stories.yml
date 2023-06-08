@@ -1,0 +1,46 @@
+version: "3.1"
+
+stories:
+- story: User wants to check account balance
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: check_balance
+  - action: action_extract_account_details
+  - action: action_check_balance
+
+- story: User wants transaction history
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: transaction_history
+  - action: action_extract_account_details
+  - action: action_transaction_history
+
+- story: User provides account details and checks balance
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: provide_details  # Updated intent to match the one in the domain
+  - action: action_store_account_details
+  - slot_was_set:
+    - name: "Ram Prasad"
+    - account_number: "00000000001234567890"
+    - phone_number: "9876543210"
+  - action: utter_confirmation
+  - intent: check_balance
+  - action: action_check_balance
+
+- story: User provides account details and requests transaction history
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: provide_details  # Updated intent to match the one in the domain
+  - action: action_store_account_details
+  - slot_was_set:
+    - name: "Ram Prasad"
+    - account_number: "00000000001234567890"
+    - phone_number: "9876543210"
+  - action: utter_confirmation
+  - intent: transaction_history
+  - action: action_transaction_history
