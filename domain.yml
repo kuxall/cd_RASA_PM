@@ -11,6 +11,7 @@ intents:
   - check_balance
   - transaction_history
   - provide_details
+  - get_account_balance
 
 slots:
   account_number:
@@ -28,11 +29,17 @@ slots:
     mappings:
       - type: from_entity
         entity: phone_number
+  balance:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: balance
 
 entities:
   - account_number
   - name
   - phone_number
+  - balance
 
 responses:
   utter_greet:
@@ -65,13 +72,14 @@ responses:
   utter_account_details_extracted:
     - text: "I have extracted your account details."
     - text: "Here are your account details:"
-    - text: f"Account Holder: {name}\nAccount Number: {account_number}\nPhone Number: {phone_number}"
+    - text: f"Account Holder:{name}\n Account Number:{account_number} \n Phone Number:{phone_number}"
 
 actions:
   - action_extract_account_details
   - action_store_account_details
   - action_check_balance
   - action_transaction_history
+  - action_retrieve_account_balance
 
 templates:
   utter_ask_continue:

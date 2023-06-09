@@ -147,6 +147,19 @@ nlu:
     - I'm [Ram Prasad](name) and my account number is [00000000001234567890](account_number).
     - I'm contacting you regarding my account with number [00000000001234567890](account_number).
 
+- intent: get_account_balance
+  examples: |
+    - What is my account balance?
+    - Can you tell me how much money is in my account?
+    - I would like to know my current balance.
+    - What's the balance in my account?
+    - How much money do I have in my account?
+    - Please provide my account balance.
+    - Show me the balance of my account.
+    - Tell me the available funds in my account.
+    - Check my account balance.
+    - Display my account balance
+
 - lookup: account_number
   examples: |
     - 00000000009876543210
