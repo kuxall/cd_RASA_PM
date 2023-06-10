@@ -67,7 +67,7 @@ responses:
     - text: "Sorry, we couldn't find your account information."
 
   utter_transaction_history:
-    - text: f"Here are your transaction details:{transaction_history}"
+    - text: "We are not having any transactions this time. Will add this features later. Have patience"
 
   utter_account_details_extracted:
     - text: "I have extracted your account details."

@@ -90,7 +90,7 @@ class ActionStoreAccountDetails(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        account_balance = 500
+        account_balance = 1000
 
         dispatcher.utter_message(text="Sure! Let me check your account balance.")
         dispatcher.utter_message(text=f"Your current account balance is ${account_balance}.")
